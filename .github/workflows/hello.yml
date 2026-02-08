@@ -1,0 +1,13 @@
+name: Hello World!
+
+on: # Check for events
+  push: # Did anyone push code? 
+    branches: # If yes, then only trigger jobs if the code was pushed in the following branches:
+      - main
+ 
+jobs:
+  hello-world-job: # name of the job
+    runs-on: ubuntu-latest # What virtual machine to run on
+    steps: # List the steps for the current job to be executed sequentially
+      - name: Say Hello # The hypen indicates a new item in the list of steps
+        run: echo "Hello World!" # Each step can have a name, but MUST have something to run. The run: is mandatory
