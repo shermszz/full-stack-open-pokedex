@@ -11,3 +11,7 @@ jobs:
     steps: # List the steps for the current job to be executed sequentially
       - name: Say Hello # The hypen indicates a new item in the list of steps
         run: echo "Hello World!" # Each step can have a name, but MUST have something to run. The run: is mandatory
+      - name: Now it is
+        run: date 
+      - name: Directory content
+        run: ls -l
