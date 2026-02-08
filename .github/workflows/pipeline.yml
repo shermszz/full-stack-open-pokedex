@@ -18,4 +18,8 @@ jobs:
       - name: Install dependencies
         run: npm install # Lastly, run npm install to install all dependencies
       - name: Check style
-        run: npm run eslint
+        run: npm run eslint # Running eslint style checks (Ex11.5)
+      - name: Running tests
+        run: npm run tests # Running test from jest (Ex11.7)
+      - name: Running production build
+        run: npm run build # Creating a dist folder
