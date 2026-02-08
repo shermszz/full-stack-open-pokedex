@@ -7,7 +7,7 @@ on:
 
 jobs:
   simple-deployment-pipeline:
-    runs-on: ubuntu latest
+    runs-on: ubuntu-latest
     steps:
       - name: Download the code from repository
         uses: actions/checkout@v4 # First let GitHub actions copy all theh code that we need from our repository
