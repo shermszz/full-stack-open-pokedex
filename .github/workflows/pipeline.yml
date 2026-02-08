@@ -1,0 +1,21 @@
+name: Deployment pipeline
+
+on: 
+  push:
+    branches:
+      - main 
+
+jobs:
+  simple-deployment-pipeline:
+    runs-on: ubuntu latest
+    steps:
+      - name: Download the code from repository
+        uses: actions/checkout@v4 # First let GitHub actions copy all theh code that we need from our repository
+      - name: Setting up Node to compatible version
+        uses: actions/setup-node@v4 # Next, ensure that we have node set up in order to run the scripts in package.json
+        with: 
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install # Lastly, run npm install to install all dependencies
+      - name: Check style
+        run: npm run eslint
